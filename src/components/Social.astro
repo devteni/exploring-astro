@@ -1,0 +1,22 @@
+---
+import { capitalize } from "lodash";
+
+const { platform, username } = Astro.props;
+---
+<a href={`https://www.${platform}.com/${username}`}>{capitalize(platform)}</a>
+
+<style>
+    a {
+      padding: 0.5rem 1rem;
+      color: white;
+      background-color: #4c1d95;
+      text-decoration: none;
+    }
+
+    a:hover {
+        background-color: aliceblue;
+        color: black;
+        transition: .2s ease-in-out;
+        border: 1px solid black;
+    }
+  </style>

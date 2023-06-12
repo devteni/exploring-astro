@@ -1,0 +1,17 @@
+---
+import Social from "./Social.astro";
+
+const platform = "github";
+const username = "devteni";
+
+const socials = [{platform: "twitter", username: "devteni"}];
+---
+
+<footer>
+  <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+  <p>
+    Socials: 
+    
+    { socials.map((el, i) => <Social platform={el.platform} username={el.username} /> )}
+  </p>
+</footer>
