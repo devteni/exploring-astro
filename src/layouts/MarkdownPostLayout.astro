@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 <p class="pub_date">Published on {frontmatter.pubDate.slice(0,10)}</p>
 <p class="post_desc">{frontmatter.description}</p>
 <p class="post_author">Written by {frontmatter.author}</p>
-<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} class="image"/>
+<img src={frontmatter.image.url} alt={frontmatter.image.alt} class="post_image"/>
 
 <slot />
 
@@ -19,8 +19,9 @@ const { frontmatter } = Astro.props;
         font-style: italic;
     }
 
-    .image {
+    .post_image {
         background-color: black;
+        width: 100%;
     }
 
     .post_author {
