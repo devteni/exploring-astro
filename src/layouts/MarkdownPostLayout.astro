@@ -1,0 +1,44 @@
+---
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+<Layout pageTitle={frontmatter.title}>
+<h1>{frontmatter.title}</h1>
+<p class="pub_date">Published on {frontmatter.pubDate.slice(0,10)}</p>
+<p class="post_desc">{frontmatter.description}</p>
+<p class="post_author">Written by {frontmatter.author}</p>
+<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} class="image"/>
+
+<slot />
+
+</Layout>
+
+<style>
+    .italic {
+        font-style: italic;
+    }
+
+    .image {
+        background-color: black;
+    }
+
+    .post_author {
+        font-style: italic;
+        font-size: .7rem;
+        float: right;
+        line-height: .2rem;
+    }
+
+    .pub_date {
+        font-size: .9rem;
+        font-style: italic;
+    }
+
+    .post_desc {
+        color: #4d4b4b;
+        font-size: .8rem;
+        border: 1px solid black;
+        padding: 1rem 1rem;
+    }
+</style>

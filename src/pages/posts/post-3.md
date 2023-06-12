@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: My Third Blog Post
 author: Teniola Fatunmbi
 description: "Astro is a cool tool!"
