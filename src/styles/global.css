@@ -14,6 +14,16 @@ body {
 * {
     box-sizing: border-box;
 }
+
+html.dark {
+    background-color: #0d0950;
+    color: #fff;
+    transition: ease-in-out .3s;
+}
+  
+.dark .nav-links a {
+    color: #fff;
+}
   
 h1 {
     margin: 1rem 0;
@@ -62,6 +72,7 @@ h1 {
 .expanded {
     display: unset;
 }
+
 
   
 @media screen and (min-width: 636px) {
