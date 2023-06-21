@@ -1,5 +1,4 @@
 ---
-import { capitalize } from "lodash";
 import Social from "./Social.astro";
 
 const platform = "github";
@@ -9,7 +8,7 @@ const socials = [{platform: "twitter", username: "devteni"}];
 ---
 
 <footer>
-  <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{capitalize(platform)}</a>!</p>
+  <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
   <p>
     Socials: 
     
